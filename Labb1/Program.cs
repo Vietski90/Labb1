@@ -14,7 +14,7 @@ class Program
     {
         for (int start = 0; start < text.Length; start++)
         {
-            if (!char.IsNumber(text[start]))
+            if (!char.IsDigit(text[start]))
             {
                 continue;
             }
@@ -23,7 +23,7 @@ class Program
 
             for (int slut = start; slut < text.Length; slut++)
             {
-                if (!char.IsNumber(text[slut]))
+                if (!char.IsDigit(text[slut]))
                 {
                     break;
                 }
@@ -34,6 +34,8 @@ class Program
             if (siffror.Length > 0)
             {
                 Console.WriteLine(siffror);
+
+                start += siffror.Length - 1;
             }
         }
     }
